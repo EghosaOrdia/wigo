@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-on-tertiary-fixed-variant: #006a51;
+  --color-tertiary-fixed: #6efecf;
+  --color-on-secondary: #fff0e9;
+  --color-surface-container-highest: #d5dbff;
+  --color-primary-fixed-dim: #5191ff;
+  --color-surface-container-high: #dde1ff;
+  --color-on-background: #232c51;
+  --color-surface-container-lowest: #ffffff;
+  --color-primary-container: #6c9fff;
+  --color-inverse-on-surface: #929bc6;
+  --color-outline: #6c759e;
+  --color-on-secondary-fixed-variant: #853b00;
+  --color-surface-container: #e4e7ff;
+  --color-primary: #0058bb;
+  --color-on-tertiary-container: #005f48;
+  --color-secondary-fixed: #ffc5a6;
+  --color-on-error-container: #570008;
+  --color-error-container: #fb5151;
+  --color-tertiary-dim: #005b45;
+  --color-primary-fixed: #6c9fff;
+  --color-inverse-surface: #020a2f;
+  --color-on-surface-variant: #515981;
+  --color-on-secondary-container: #773400;
+  --color-on-error: #ffefee;
+  --color-on-tertiary: #c6ffe7;
+  --color-error-dim: #9f0519;
+  --color-on-primary-container: #00214f;
+  --color-secondary-container: #ffc5a6;
+  --color-secondary-fixed-dim: #ffb287;
+  --color-on-primary-fixed: #000000;
+  --color-on-surface: #232c51;
+  --color-tertiary: #006850;
+  --color-surface-container-low: #efefff;
+  --color-on-secondary-fixed: #592500;
+  --color-surface-tint: #0058bb;
+  --color-primary-dim: #004ca4;
+  --color-error: #b31b25;
+  --color-tertiary-fixed-dim: #5eefc2;
+  --color-inverse-primary: #4b8eff;
+  --color-on-primary: #f0f2ff;
+  --color-secondary: #964300;
+  --color-on-primary-fixed-variant: #002a61;
+  --color-surface-bright: #f7f5ff;
+  --color-secondary-dim: #843a00;
+  --color-tertiary-container: #6efecf;
+  --color-on-tertiary-fixed: #004b38;
+  --color-surface: #f7f5ff;
+  --color-outline-variant: #a2abd7;
+  --color-surface-variant: #d5dbff;
+  --color-surface-dim: #cad2ff;
+  --color-background: #f7f5ff;
+}
+
+body {
+  font-family: "Jakarta", sans-serif;
+}
+
+@font-face {
+  font-family: Jakarta;
+  src: url("assets/PlusJakartaSans.ttf");
+}
