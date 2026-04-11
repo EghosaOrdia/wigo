@@ -14,13 +14,48 @@ import {
   Sparkles,
   Star,
 } from "lucide-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { supabase } from "../utils/supabase";
+
+function getRandomHexColor() {
+  return (
+    "#" +
+    Math.floor(Math.random() * 16777215)
+      .toString(16)
+      .padStart(6, "0")
+      .toUpperCase()
+  );
+}
 
 const Dashboard = () => {
+  const [ideas, setIdeas] = useState([]);
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    async function getTodos() {
+      const { data: ideas } = await supabase.from("Idea").select();
+      if (ideas) {
+        setIdeas(ideas);
+        const uniqueCategories = [
+          ...new Set(ideas.map((item) => item.category)),
+        ];
+        setCategories(uniqueCategories);
+      }
+    }
+    getTodos();
+  }, []);
+
   return (
     <div className="p-8 max-w-screen-2xl mx-auto w-full">
       {/* <!-- Tag Filters --> */}
       <div className="flex flex-wrap items-center gap-3 mb-10">
+        {categories.map((cat) => (
+          <button
+            className={`px-5 py-2 rounded-full bg-primary text-on-primary font-bold text-sm transition-transform hover:scale-105`}
+          >
+            #{cat}
+          </button>
+        ))}
         <button className="px-5 py-2 rounded-full bg-primary text-on-primary font-bold text-sm transition-transform hover:scale-105">
           #all_ideas
         </button>
