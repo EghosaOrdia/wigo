@@ -1,31 +1,10 @@
-import {
-  CirclePlus,
-  List,
-  Pin,
-  Play,
-  Plus,
-  Sparkles,
-  Star,
-} from "lucide-react";
+import { CirclePlus, Plus } from "lucide-react";
 import { useEffect, useState } from "react";
 import { categoryColors, tasks } from "../utils/constants";
 import Card from "./_dashboard/Card";
-import Random from "./_dashboard/Random";
-import Snippet from "./_dashboard/Snippet";
-
-function getRandomHexColor() {
-  return (
-    "#" +
-    Math.floor(Math.random() * 16777215)
-      .toString(16)
-      .padStart(6, "0")
-      .toUpperCase()
-  );
-}
 
 const Dashboard = () => {
   const [ideas, setIdeas] = useState(tasks);
-
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -50,7 +29,6 @@ const Dashboard = () => {
 
   return (
     <div className="p-8 max-w-screen-2xl mx-auto w-full">
-      {/* <!-- Tag Filters --> */}
       <div className="flex flex-wrap items-center gap-3 mb-10">
         <button className="px-5 py-2 rounded-full bg-primary text-on-primary font-bold text-sm transition-transform hover:scale-105">
           #all_ideas
