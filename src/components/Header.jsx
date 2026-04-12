@@ -1,5 +1,4 @@
-import { LayoutGrid, List, Moon, Search } from "lucide-react";
-import React from "react";
+import { Moon, Search } from "lucide-react";
 
 const Header = () => {
   return (
@@ -12,14 +11,6 @@ const Header = () => {
             placeholder="Search your sparks..."
             type="text"
           />
-        </div>
-        <div className="flex items-center gap-2">
-          <button className="p-2 rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors">
-            <LayoutGrid />
-          </button>
-          <button className="p-2 rounded-xl text-slate-400 hover:text-on-surface transition-colors">
-            <List />
-          </button>
         </div>
       </div>
       <div className="flex items-center gap-4">

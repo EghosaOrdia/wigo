@@ -49,9 +49,7 @@ const AddIdea = ({ setIsEditingIdea }) => {
                   <span className="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold flex items-center gap-1">
                     Startup <X size={14} className="cursor-pointer" />
                   </span>
-                  <span className="px-3 py-1 bg-tertiary-container text-on-tertiary-container rounded-full text-xs font-bold flex items-center gap-1">
-                    Personal <X size={14} className="cursor-pointer" />
-                  </span>
+
                   <input
                     className="bg-transparent border-none text-sm font-medium p-0 w-20 focus:ring-2 focus:ring-primary/20 placeholder:text-outline/40 outline-none"
                     placeholder="Add..."
