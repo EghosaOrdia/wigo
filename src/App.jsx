@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import AddIdea from "./components/_dashboard/AddIdea";
 
 function App() {
-  const [isEditingIdea, setIsEditingIdea] = useState(true);
+  const [isEditingIdea, setIsEditingIdea] = useState(false);
 
   return (
     <div className="flex h-screen overflow-hidden">

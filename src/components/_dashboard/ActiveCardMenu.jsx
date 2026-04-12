@@ -2,7 +2,7 @@ import { FolderOpen, Pen, Pin, PinOff, Share2, Trash } from "lucide-react";
 
 const ActiveCardMenu = ({ is_pinned }) => {
   return (
-    <div className="absolute right-8 top-16 w-50 bg-white/70 backdrop-blur-xl border border-white/40 rounded-2xl shadow-2xl shadow-blue-900/10 overflow-hidden animate-in fade-in zoom-in duration-200 z-50">
+    <div className="absolute right-0 top-8 w-50 bg-white/70 backdrop-blur-xl border border-white/40 rounded-2xl shadow-2xl shadow-blue-900/10 overflow-hidden animate-in fade-in zoom-in duration-200 z-50">
       <button className="w-full flex items-center gap-3 px-4 py-2.5 text-xs font-medium text-on-surface hover:bg-surface transition-colors cursor-pointer">
         <Pen size={18} />
         Edit Idea

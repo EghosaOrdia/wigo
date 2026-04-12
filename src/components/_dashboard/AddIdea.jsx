@@ -10,8 +10,17 @@ import {
   Upload,
   X,
 } from "lucide-react";
+import ColorSelector from "./ColorSelector";
+import DescriptionEditor from "./DescriptionEditor";
+import { useCallback, useState } from "react";
 
 const AddIdea = ({ setIsEditingIdea }) => {
+  const [desc, setDesc] = useState("");
+
+  const onChange = useCallback((newValue) => {
+    setDesc(newValue);
+  }, []);
+
   return (
     <>
       <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm">
@@ -77,6 +86,24 @@ const AddIdea = ({ setIsEditingIdea }) => {
                 </div>
               </div>
             </div>
+            {/* Color Palette */}
+            <div className="flex gap-8 items-start">
+              {/* <!-- Card Background Color --> */}
+              <div className="flex flex-col gap-2 relative">
+                <label className="text-xs font-bold uppercase tracking-widest text-outline ml-4">
+                  Card Background
+                </label>
+                <ColorSelector />
+              </div>
+              {/* <!-- Category Color (Open State Demo) --> */}
+              <div className="flex flex-col gap-2 relative">
+                <label className="text-xs font-bold uppercase tracking-widest text-outline ml-4">
+                  Category Color
+                </label>
+                <ColorSelector />
+              </div>
+            </div>
+
             {/* <!-- File Upload Area --> */}
             <div className="flex flex-col gap-2">
               <label className="text-xs font-bold uppercase tracking-widest text-outline ml-4">
@@ -112,37 +139,7 @@ const AddIdea = ({ setIsEditingIdea }) => {
               </div>
             </div>
             {/* <!-- Content Area (Rich Text) --> */}
-            <div className="flex flex-col gap-2 grow">
-              <label className="text-xs font-bold uppercase tracking-widest text-outline ml-4">
-                Description
-              </label>
-              <div className="bg-surface-container-low rounded-4xl overflow-hidden border border-transparent focus-within:border-primary/20 focus-within:ring-2 focus-within:ring-primary/10 transition-all">
-                {/* <!-- Formatting Controls --> */}
-                <div className="flex items-center gap-1 px-4 py-2 border-b border-outline-variant/10 bg-surface-container/30">
-                  <button className="p-1.5 rounded-lg hover:bg-white transition-colors text-on-surface-variant focus:ring-2 focus:ring-primary/20 outline-none">
-                    <Bold size={18} />
-                  </button>
-                  <button className="p-1.5 rounded-lg hover:bg-white transition-colors text-on-surface-variant focus:ring-2 focus:ring-primary/20 outline-none">
-                    <Italic size={18} />
-                  </button>
-                  <div className="w-px h-4 bg-outline-variant/30 mx-1"></div>
-                  <button className="p-1.5 rounded-lg hover:bg-white transition-colors text-on-surface-variant focus:ring-2 focus:ring-primary/20 outline-none">
-                    <List size={18} />
-                  </button>
-                  <button className="p-1.5 rounded-lg hover:bg-white transition-colors text-on-surface-variant focus:ring-2 focus:ring-primary/20 outline-none">
-                    <ListChecks size={18} />
-                  </button>
-                  <div className="w-px h-4 bg-outline-variant/30 mx-1"></div>
-                  <button className="p-1.5 rounded-lg hover:bg-white transition-colors text-on-surface-variant focus:ring-2 focus:ring-primary/20 outline-none">
-                    <Link2 size={18} />
-                  </button>
-                </div>
-                <textarea
-                  className="w-full bg-transparent border-none focus:ring-0 min-h-40 p-6 text-sm leading-relaxed placeholder:text-outline/40 outline-none"
-                  placeholder="Describe your idea..."
-                ></textarea>
-              </div>
-            </div>
+            <DescriptionEditor value={desc} onChange={onChange} />
           </div>
           {/* <!-- Modal Footer Actions --> */}
           <div className="px-8 py-6 border-t border-outline-variant/10 flex justify-end items-center gap-4">
