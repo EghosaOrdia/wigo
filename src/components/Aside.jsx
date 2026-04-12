@@ -60,7 +60,7 @@ const Aside = () => {
         </a>
       </nav>
       <div className="mt-auto flex flex-col gap-y-2">
-        <button className="bg-primary-container text-on-primary-container rounded-4xl py-4 px-6 font-bold flex items-center justify-center gap-2 mb-6 hover:scale-[1.05] transition-transform">
+        <button className="bg-primary-container text-on-primary-container rounded-4xl py-4 px-2 font-bold flex items-center justify-center gap-2 mb-6 hover:scale-[1.05] transition-transform">
           <Zap />
           Quick Capture
         </button>
