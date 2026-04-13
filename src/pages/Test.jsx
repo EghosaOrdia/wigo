@@ -1,24 +1,29 @@
 // src/Tiptap.tsx
-import { useEditor, EditorContent, EditorContext } from "@tiptap/react";
-import { FloatingMenu, BubbleMenu } from "@tiptap/react/menus";
+import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import { useMemo } from "react";
+
+// Local imports
+import { MenuBar } from "../components/MenuBar";
+
+const extensions = [StarterKit];
 
 const Test = () => {
   const editor = useEditor({
-    extensions: [StarterKit], // define your extension array
-    content: "<p>Hello World!</p>", // initial content
+    extensions,
+    content: "",
   });
 
-  // Memoize the provider value to avoid unnecessary re-renders
-  const providerValue = useMemo(() => ({ editor }), [editor]);
-
   return (
-    <EditorContext.Provider value={providerValue}>
-      <EditorContent editor={editor} />
-      <FloatingMenu editor={editor}>This is the floating menu</FloatingMenu>
-      <BubbleMenu editor={editor}>This is the bubble menu</BubbleMenu>
-    </EditorContext.Provider>
+    <main className="h-screen bg-surface pt-16">
+      <div className="bg-surface-container-low rounded-4xl overflow-hidden border border-transparent focus-within:border-primary/20 focus-within:ring-2 focus-within:ring-primary/10 transition-all">
+        <MenuBar editor={editor} />
+
+        <EditorContent
+          editor={editor}
+          className="bg-white border-none [&_.ProseMirror]:outline-none "
+        />
+      </div>
+    </main>
   );
 };
 
