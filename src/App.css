@@ -121,3 +121,7 @@ body {
   padding-left: 1rem;
   margin: 0; /* optional cleanup */
 }
+
+.auth-gradient-bg {
+  background: linear-gradient(135deg, #0058bb 0%, #6c9fff 50%, #6efecf 100%);
+}

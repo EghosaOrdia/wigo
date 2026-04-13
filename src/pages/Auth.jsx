@@ -1,3 +1,4 @@
+import { Eye, Sparkles } from "lucide-react";
 import React from "react";
 
 const Auth = () => {
@@ -21,13 +22,13 @@ const Auth = () => {
             </p>
           </div>
           <form className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
               <div className="space-y-2">
                 <label className="text-on-surface font-semibold text-sm px-4">
                   First Name
                 </label>
                 <input
-                  className="w-full px-6 py-4 rounded-xl bg-surface-container-highest border-none focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all text-on-surface placeholder:text-outline"
+                  className="w-full px-6 py-4 rounded-3xl bg-surface-container-highest border-none focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all text-on-surface placeholder:text-outline outline-none mt-2"
                   placeholder="Jane"
                   type="text"
                 />
@@ -37,7 +38,7 @@ const Auth = () => {
                   Last Name
                 </label>
                 <input
-                  className="w-full px-6 py-4 rounded-xl bg-surface-container-highest border-none focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all text-on-surface placeholder:text-outline"
+                  className="w-full px-6 py-4 rounded-3xl bg-surface-container-highest border-none focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all text-on-surface placeholder:text-outline outline-none mt-2"
                   placeholder="Doe"
                   type="text"
                 />
@@ -48,7 +49,7 @@ const Auth = () => {
                 Email Address
               </label>
               <input
-                className="w-full px-6 py-4 rounded-xl bg-error-container/10 border border-error-dim/20 focus:ring-2 focus:ring-error transition-all text-on-surface placeholder:text-outline"
+                className="w-full px-6 py-4 rounded-3xl bg-error-container/10 border border-error-dim/20 focus:ring-2 focus:ring-error transition-all text-on-surface placeholder:text-outline outline-none mt-2"
                 placeholder="jane@example.com"
                 type="email"
               />
@@ -65,20 +66,15 @@ const Auth = () => {
               </label>
               <div className="relative">
                 <input
-                  className="w-full px-6 py-4 rounded-xl bg-surface-container-highest border-none focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all text-on-surface placeholder:text-outline"
+                  className="w-full px-6 py-4 rounded-3xl bg-surface-container-highest border-none focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all text-on-surface placeholder:text-outline outline-none mt-2"
                   placeholder="••••••••"
                   type="password"
                 />
                 <button
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-outline hover:text-primary transition-colors"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-outline hover:text-primary transition-colors outline-none"
                   type="button"
                 >
-                  <span
-                    className="material-symbols-outlined"
-                    data-icon="visibility"
-                  >
-                    visibility
-                  </span>
+                  <Eye />
                 </button>
               </div>
               <p className="text-xs text-on-surface-variant px-4 leading-relaxed">
@@ -88,22 +84,23 @@ const Auth = () => {
             </div>
             <div className="flex items-start space-x-3 px-1">
               <input
-                className="mt-1 h-5 w-5 rounded-md border-outline-variant text-primary focus:ring-primary transition-all"
+                className="mt-1 h-5 w-5 rounded-md border-outline-variant text-primary focus:ring-primary transition-all outline-primary"
                 id="terms"
                 type="checkbox"
               />
               <label
                 className="text-sm text-on-surface-variant leading-snug"
-                for="terms"
+                htmlFor="terms"
               >
                 By creating an account, I agree to the
                 <a
                   className="text-primary font-semibold hover:underline decoration-2"
                   href="#"
                 >
+                  {" "}
                   Terms of Service
-                </a>
-                and
+                </a>{" "}
+                and{" "}
                 <a
                   className="text-primary font-semibold hover:underline decoration-2"
                   href="#"
@@ -114,7 +111,7 @@ const Auth = () => {
               </label>
             </div>
             <button
-              className="w-full py-4 px-8 rounded-xl bg-linear-to-r from-primary to-primary-container text-on-primary font-bold text-lg shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all"
+              className="w-full py-4 px-8 rounded-3xl bg-linear-to-r from-primary to-primary-container text-on-primary font-bold text-lg shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all"
               type="submit"
             >
               Sign Up
@@ -127,7 +124,7 @@ const Auth = () => {
             </span>
             <div className="grow border-t border-surface-container-highest"></div>
           </div>
-          <button className="w-full py-4 px-8 rounded-xl bg-surface-container-high hover:bg-surface-container-highest transition-colors flex items-center justify-center space-x-3 group">
+          <button className="w-full py-4 px-8 rounded-3xl bg-surface-container-high hover:bg-surface-container-highest transition-colors flex items-center justify-center space-x-3 group">
             <img
               alt="Google Logo"
               className="w-5 h-5 grayscale group-hover:grayscale-0 transition-all"
@@ -156,14 +153,9 @@ const Auth = () => {
         <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-secondary-container opacity-20 blur-[120px]"></div>
         <div className="relative z-10 w-full max-w-lg p-8">
           {/* <!-- Floating Glass Card --> */}
-          <div className="glass-panel p-12 rounded-xl shadow-2xl space-y-8 border border-white/20">
-            <div className="w-20 h-20 bg-primary-container/30 rounded-lg flex items-center justify-center backdrop-blur-md">
-              <span
-                className="material-symbols-outlined text-white text-5xl"
-                style="font-variation-settings: 'FILL' 1;"
-              >
-                auto_awesome
-              </span>
+          <div className="glass-panel p-12 rounded-4xl shadow-2xl space-y-8 border border-white/20">
+            <div className="w-20 h-20 bg-primary-container/30 rounded-3xl flex items-center justify-center backdrop-blur-md">
+              <Sparkles className="text-white" />
             </div>
             <div className="space-y-4">
               <h2 className="text-5xl font-extrabold text-white leading-tight tracking-tight">
