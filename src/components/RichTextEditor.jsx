@@ -1,3 +1,5 @@
+import { Bold, Italic, Link2, List, ListChecks } from "lucide-react";
+
 const btnCls =
   "p-1.5 rounded-lg hover:bg-white transition-colors text-on-surface-variant focus:ring-2 focus:ring-primary/20 outline-none";
 

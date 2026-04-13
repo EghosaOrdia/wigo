@@ -1,26 +1,8 @@
-import {
-  Bold,
-  File,
-  Italic,
-  Link,
-  Link2,
-  List,
-  ListChecks,
-  Trash,
-  Upload,
-  X,
-} from "lucide-react";
+import { File, Trash, Upload, X } from "lucide-react";
 import ColorSelector from "./ColorSelector";
-import DescriptionEditor from "./DescriptionEditor";
-import { useCallback, useState } from "react";
+import RichTextEditor from "../RichTextEditor";
 
 const AddIdea = ({ setIsEditingIdea }) => {
-  const [desc, setDesc] = useState("");
-
-  const onChange = useCallback((newValue) => {
-    setDesc(newValue);
-  }, []);
-
   return (
     <>
       <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm">
@@ -139,7 +121,7 @@ const AddIdea = ({ setIsEditingIdea }) => {
               </div>
             </div>
             {/* <!-- Content Area (Rich Text) --> */}
-            <DescriptionEditor value={desc} onChange={onChange} />
+            <RichTextEditor />
           </div>
           {/* <!-- Modal Footer Actions --> */}
           <div className="px-8 py-6 border-t border-outline-variant/10 flex justify-end items-center gap-4">
