@@ -118,5 +118,6 @@ body {
 }
 
 .ProseMirror p {
+  padding-left: 1rem;
   margin: 0; /* optional cleanup */
 }

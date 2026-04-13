@@ -40,7 +40,7 @@ export const MenuBar = ({ editor }) => {
 
   return (
     <div className="control-group">
-      <div className="flex justify-between items-center gap-0.5 px-3 py-2 bg-gray-50/80 border-b border-gray-100 relative flex-wrap">
+      <div className="flex justify-between items-center gap-0.5 px-3 py-2 bg-gray-50/80 border-b border-gray-100 relative flex-wrap md:flex-nowrap">
         <button
           onClick={() => editor.chain().focus().toggleBold().run()}
           disabled={!editorState.canBold}
