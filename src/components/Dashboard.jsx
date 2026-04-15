@@ -30,13 +30,13 @@ const Dashboard = () => {
   return (
     <div className="p-8 max-w-screen-2xl mx-auto w-full">
       <div className="flex flex-wrap items-center gap-3 mb-10">
-        <button className="px-5 py-2 rounded-full bg-primary text-on-primary font-bold text-sm transition-transform hover:scale-105">
+        <button className="px-5 py-2 rounded-full bg-primary text-on-primary font-medium text-sm transition-transform hover:scale-105">
           #all_ideas
         </button>
         {categories.map((cat) => (
           <button
             key={cat}
-            className={`px-5 py-2 rounded-full ${categoryColors[cat]} font-bold text-sm transition-transform hover:scale-105`}
+            className={`px-5 py-2 rounded-full ${categoryColors[cat]} font-medium text-sm transition-transform hover:scale-105`}
           >
             #{cat}
           </button>
