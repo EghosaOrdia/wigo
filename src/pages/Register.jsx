@@ -1,7 +1,7 @@
-import { Eye, Sparkles } from "lucide-react";
+import { Eye, ShieldAlert, Sparkles } from "lucide-react";
 import React from "react";
 
-const Auth = () => {
+const Register = () => {
   return (
     <main className="min-h-screen w-full flex flex-col md:flex-row">
       {/* <!-- Left Side: Auth Form --> */}
@@ -10,7 +10,7 @@ const Auth = () => {
           {/* <!-- Brand Anchor --> */}
           <div className="flex items-center space-x-2">
             <span className="text-primary text-3xl font-bold tracking-tighter">
-              Spark
+              Wigo
             </span>
           </div>
           <div className="space-y-2">
@@ -54,9 +54,7 @@ const Auth = () => {
                 type="email"
               />
               <span className="text-error text-xs font-medium px-4 flex items-center">
-                <span className="material-symbols-outlined text-[14px] mr-1">
-                  error
-                </span>
+                <ShieldAlert size={17} className="mr-1" />
                 Please enter a valid email
               </span>
             </div>
@@ -71,7 +69,7 @@ const Auth = () => {
                   type="password"
                 />
                 <button
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-outline hover:text-primary transition-colors outline-none"
+                  className="absolute right-4 mt-1 top-1/2 -translate-x-1/2 -translate-y-1/2 text-outline hover:text-primary transition-colors outline-none"
                   type="button"
                 >
                   <Eye />
@@ -202,4 +200,4 @@ const Auth = () => {
   );
 };
 
-export default Auth;
+export default Register;

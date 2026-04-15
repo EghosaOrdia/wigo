@@ -1,4 +1,4 @@
-import { MailQuestionMark } from "lucide-react";
+import { Headset, HelpCircle, MailQuestionMark } from "lucide-react";
 
 const VerifyAuth = () => {
   return (
@@ -12,7 +12,7 @@ const VerifyAuth = () => {
         </div>
         <div class="flex items-center gap-4">
           <button class="flex items-center justify-center w-10 h-10 text-slate-500 hover:bg-white/50 transition-all duration-300 rounded-4xl active:scale-95">
-            <span class="material-symbols-outlined">help_outline</span>
+            <HelpCircle />
           </button>
         </div>
       </nav>
@@ -21,7 +21,7 @@ const VerifyAuth = () => {
         {/* <!-- Decorative Ambient Sparks --> */}
         <div class="absolute -top-32 -left-32 w-64 h-64 bg-primary-container/30 rounded-full blur-[80px]"></div>
         <div class="absolute -bottom-32 -right-32 w-80 h-80 bg-tertiary-container/20 rounded-full blur-[100px]"></div>
-        <div class="glass-panel relative z-10 p-10 md:p-16 rounded-xl shadow-[0_32px_64px_-16px_rgba(35,44,81,0.08)] text-center border border-white/40">
+        <div class="glass-panel relative z-10 p-10 md:p-16 rounded-4xl shadow-[0_32px_64px_-16px_rgba(35,44,81,0.08)] text-center border border-white/40">
           {/* <!-- Branding Header --> */}
           <div class="mb-10 inline-flex p-5 rounded-4xl bg-surface-container-low text-primary">
             <MailQuestionMark />
@@ -106,7 +106,7 @@ const VerifyAuth = () => {
             class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1.5"
             href="#"
           >
-            <span class="material-symbols-outlined text-lg">support_agent</span>
+            <Headset />
             Contact Support
           </a>
           <div class="w-1 h-1 rounded-full bg-outline-variant"></div>
