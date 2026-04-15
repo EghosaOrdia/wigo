@@ -60,20 +60,20 @@ const Aside = () => {
         </a>
       </nav>
       <div className="mt-auto flex flex-col gap-y-2">
-        <button className="bg-primary-container text-on-primary-container rounded-4xl py-4 px-2 font-bold flex items-center justify-center gap-2 mb-6 hover:scale-[1.05] transition-transform">
+        {/* <button className="bg-primary-container text-on-primary-container rounded-4xl py-4 px-2 font-bold flex items-center justify-center gap-2 mb-6 hover:scale-[1.05] transition-transform">
           <Zap />
           Quick Capture
-        </button>
+        </button> */}
         <div className="flex flex-col gap-1 border-t border-outline-variant/10 pt-6">
           <a
-            className="flex items-center gap-4 px-6 py-3 text-slate-500  hover:bg-blue-50 rounded-xl transition-all"
+            className="flex items-center gap-4 px-6 py-3 text-slate-500  hover:bg-blue-50 rounded-4xl transition-all"
             href="#"
           >
             <Bolt />
             <span>Settings</span>
           </a>
           <a
-            className="flex items-center gap-4 px-6 py-3 text-slate-500 hover:bg-blue-50 rounded-xl transition-all"
+            className="flex items-center gap-4 px-6 py-3 text-slate-500 hover:bg-blue-50 rounded-4xl transition-all"
             href="#"
           >
             <CircleQuestionMark />

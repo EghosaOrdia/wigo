@@ -49,7 +49,8 @@ export const tasks = [
     id: "d5b3e9c4-3f6a-4e8c-9c4a-123456789003",
     user_id: "00000000-0000-0000-0000-000000000001",
     title: "Startup idea",
-    content: "App that syncs thoughts across devices",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius harum nihil quibusdam exercitationem, totam quos corrupti suscipit, cumque odio soluta esse tenetur autem quam repellendus quas. Cumque quia a saepe quidem, doloremque cupiditate reiciendis placeat dicta animi, nam, voluptates repellat!",
     type: "note",
     category: "business",
     tags: ["startup", "idea"],

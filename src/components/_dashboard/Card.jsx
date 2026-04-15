@@ -1,5 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import { MoreVertical, Pin, Smartphone } from "lucide-react";
+import {
+  MoreVertical,
+  Pin,
+  RefreshCcw,
+  RefreshCw,
+  Smartphone,
+} from "lucide-react";
 
 // Local Imports
 import ActiveCardMenu from "./ActiveCardMenu";
@@ -55,11 +61,19 @@ const Card = ({ idea }) => {
       <p className="text-on-surface-variant body-lg mb-8 line-clamp-3">
         {idea.content}
       </p>
+
       <div className="mt-auto">
         <span className="text-xs font-semibold text-outline">
           Edited 2m ago
         </span>
       </div>
+
+      {idea.device_name == "iPhone" && (
+        <div class="mt-2 flex items-center gap-2 text-tertiary text-xs font-bold">
+          <RefreshCw size={14} />
+          <span>Synced from iPhone</span>
+        </div>
+      )}
     </div>
   );
 };
