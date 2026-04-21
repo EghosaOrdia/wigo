@@ -69,7 +69,7 @@ const Card = ({ idea }) => {
       </div>
 
       {idea.device_name == "iPhone" && (
-        <div class="mt-2 flex items-center gap-2 text-tertiary text-xs font-bold">
+        <div className="mt-2 flex items-center gap-2 text-tertiary text-xs font-bold">
           <RefreshCw size={14} />
           <span>Synced from iPhone</span>
         </div>
